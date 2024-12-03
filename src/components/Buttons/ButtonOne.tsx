@@ -2,7 +2,7 @@ import { PropsWithChildren, useEffect, useRef } from "react";
 import "../../main.scss";
 
 type ButtonProps = PropsWithChildren<{
-  variant: "primary" | "example";
+  variant: "primary" | "one" | "two";
   backgroundColor?: string;
   color?: string;
   disabled: boolean;

@@ -1,0 +1,9 @@
+type ButtonTwoProps = {
+  children: React.ReactNode;
+};
+
+const ButtonTwoComponent = ({ children }: ButtonTwoProps) => {
+  return <div>{children}</div>;
+};
+
+export default ButtonTwoComponent;

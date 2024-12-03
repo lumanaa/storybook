@@ -3,6 +3,7 @@ import { ComponentProps } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { ButtonComponent } from "../components/Buttons/Button";
 import ButtonOneComponent from "../components/Buttons/ButtonOne";
+import ButtonTwoComponent from "../components/Buttons/ButtonTwo";
 
 type BtnProps = ComponentProps<typeof ButtonComponent> & {
   btnText: string;
@@ -17,7 +18,7 @@ const meta: Meta<BtnProps> = {
   },
   argTypes: {
     variant: {
-      options: ["primary", "example"], // Fix here to match the "variant" in ButtonProps
+      options: ["primary", "one", "two"], // Fix here to match the "variant" in ButtonProps
       control: { type: "radio" },
     },
     size: {
@@ -34,7 +35,7 @@ const meta: Meta<BtnProps> = {
       control: {
         type: "color",
       },
-      if: { arg: "variant", eq: "example" },
+      if: { arg: "variant", eq: "one" },
     },
     backgroundColor: {
       control: {
@@ -59,23 +60,29 @@ export const Primary: Story = {
     btnText: "Button",
     backgroundColor: "white",
     disabled: false,
-    color: "black",
+    color: "#2d2d2d",
     size: "medium",
   },
   render: ({ variant, btnText, ...args }) => {
-    // Conditionally render ButtonComponent or ButtonOne based on variant
-    if (variant === "example") {
-      return (
-        <ButtonOneComponent {...args} variant={variant}>
-          {btnText}
-        </ButtonOneComponent>
-      );
-    } else {
-      return (
-        <ButtonComponent {...args} variant={variant}>
-          {btnText}
-        </ButtonComponent>
-      );
+    switch (variant) {
+      case "one":
+        return (
+          <ButtonOneComponent {...args} variant={variant}>
+            {btnText}
+          </ButtonOneComponent>
+        );
+      case "two":
+        return (
+          <ButtonTwoComponent {...args} variant={variant}>
+            {btnText}
+          </ButtonTwoComponent>
+        );
+      default:
+        return (
+          <ButtonComponent {...args} variant={variant}>
+            {btnText}
+          </ButtonComponent>
+        );
     }
   },
 };
@@ -86,11 +93,22 @@ export const ButtonOne: Story = {
     size: "medium",
     color: "#999",
     disabled: false,
-    variant: "example", // Add the variant here to avoid missing prop error
+    variant: "one", // Add the variant here to avoid missing prop error
     hoverColor: "#0f0",
   },
   render: ({ btnText, ...args }) => {
     // Conditionally render ButtonComponent or ButtonOne based on variant
     return <ButtonOneComponent {...args}>{btnText}</ButtonOneComponent>;
+  },
+};
+
+export const ButtonTwo: Story = {
+  args: {
+    btnText: "Button",
+    variant: "two",
+    color: "#1abc9c",
+  },
+  render: ({ btnText, ...args }) => {
+    return <ButtonTwoComponent {...args}>{btnText}</ButtonTwoComponent>;
   },
 };

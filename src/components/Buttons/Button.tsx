@@ -2,9 +2,9 @@ import { PropsWithChildren } from "react";
 import "../../main.scss";
 
 type ButtonProps = PropsWithChildren<{
-  variant: "primary" | "example";
+  variant: "primary" | "one" | "two";
   backgroundColor?: string;
-  color?: string;
+  color: string;
   disabled: boolean;
   size: "small" | "medium" | "large";
 }>;
