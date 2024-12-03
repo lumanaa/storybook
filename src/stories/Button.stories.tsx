@@ -19,11 +19,11 @@ const meta: Meta<BtnProps> = {
   argTypes: {
     variant: {
       options: ["primary", "one", "two"], // Fix here to match the "variant" in ButtonProps
-      control: { type: "radio" },
+      control: { type: "inline-radio" },
     },
     size: {
       options: ["small", "medium", "large"], // Fix here to match the "variant" in ButtonProps
-      control: { type: "select" },
+      control: { type: "inline-radio" },
     },
 
     color: {

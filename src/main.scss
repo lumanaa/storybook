@@ -3,6 +3,8 @@
 
 @use "./style/abstracts/variables";
 
-@use "./style/Components/button";
-@use "./style/Components/buttonOne";
-@use "./style/Components/btnTwo";
+@use "./style/Components/Button/button";
+@use "./style/Components/Button/buttonOne";
+@use "./style/Components/Button/btnTwo";
+
+@use "./style/Components/PageEffects/snapScroll";
