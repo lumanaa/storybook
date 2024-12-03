@@ -2,7 +2,7 @@
 import { ComponentProps } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import { ButtonComponent } from "../components/Buttons/Button";
-import ButtonOne from "../components/Buttons/ButtonOne";
+import ButtonOneComponent from "../components/Buttons/ButtonOne";
 
 type BtnProps = ComponentProps<typeof ButtonComponent> & {
   btnText: string;
@@ -66,9 +66,9 @@ export const Primary: Story = {
     // Conditionally render ButtonComponent or ButtonOne based on variant
     if (variant === "example") {
       return (
-        <ButtonOne {...args} variant={variant}>
+        <ButtonOneComponent {...args} variant={variant}>
           {btnText}
-        </ButtonOne>
+        </ButtonOneComponent>
       );
     } else {
       return (
@@ -80,7 +80,7 @@ export const Primary: Story = {
   },
 };
 
-export const Example: Story = {
+export const ButtonOne: Story = {
   args: {
     btnText: "Button",
     size: "medium",
@@ -89,20 +89,8 @@ export const Example: Story = {
     variant: "example", // Add the variant here to avoid missing prop error
     hoverColor: "#0f0",
   },
-  render: ({ variant, btnText, ...args }) => {
+  render: ({ btnText, ...args }) => {
     // Conditionally render ButtonComponent or ButtonOne based on variant
-    if (variant === "example") {
-      return (
-        <ButtonOne {...args} variant={variant}>
-          {btnText}
-        </ButtonOne>
-      );
-    } else {
-      return (
-        <ButtonComponent {...args} variant={variant}>
-          {btnText}
-        </ButtonComponent>
-      );
-    }
+    return <ButtonOneComponent {...args}>{btnText}</ButtonOneComponent>;
   },
 };
