@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as var;
+
+.button {
+  padding: 20px 60px;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-family: var.$ibm;
+  letter-spacing: 1px;
+  border-radius: 48px;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  &-disabled {
+    opacity: 0.5;
+  }
+
+  &-small {
+    font-size: 0.9em;
+  }
+  &-large {
+    font-size: 1.5em;
+  }
+}

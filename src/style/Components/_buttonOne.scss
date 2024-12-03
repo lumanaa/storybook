@@ -1,0 +1,68 @@
+.buttons-body {
+  background-color: rgb(26, 26, 26);
+  min-height: 15vh;
+  width: 100vw;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    position: relative;
+    text-decoration: none;
+    color: #999;
+    background-color: rgb(45, 45, 45);
+    padding: 20px 60px;
+    border-radius: 48px;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      color: var(--clr) !important;
+      text-shadow: 0 0 15px var(--clr), 0 0 40px var(--clr);
+    }
+    span {
+      position: relative;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: var(--y);
+      left: var(--x);
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(var(--clr), transparent, transparent);
+      transition: 0.5s, top 0s, left 0s;
+      opacity: 0;
+    }
+    &:hover::before {
+      opacity: 1 !important;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      background-color: rgb(45, 45, 45);
+      border-radius: 48px;
+    }
+  }
+}
+
+.buttons-body .btn-one-small {
+  font-size: 0.9em;
+}
+
+.buttons-body .btn-one-large {
+  font-size: 1.4em;
+}
+
+.buttons-body .btn-one-disabled {
+  opacity: 0.7;
+  pointer-events: none; // Prevent interactions like hover effects
+  animation: none;
+  transition: none;
+}
