@@ -1,11 +1,11 @@
 import { ComponentProps } from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import HoverEffectsComponent from "../components/HoverEffects/HoverEffects";
+import ImageHoverComponent from "../components/HoverEffects/HoverEffects";
 
-type HoverProps = ComponentProps<typeof HoverEffectsComponent>;
+type HoverProps = ComponentProps<typeof ImageHoverComponent>;
 
 const meta: Meta<HoverProps> = {
-  component: HoverEffectsComponent,
+  component: ImageHoverComponent,
   parameters: {
     layout: "fullscreen",
   },
@@ -15,9 +15,9 @@ export default meta;
 
 type Story = StoryObj<HoverProps>;
 
-export const HoverEffects: Story = {
+export const ImageHover: Story = {
   args: {},
   render: () => {
-    return <HoverEffectsComponent />;
+    return <ImageHoverComponent />;
   },
 };

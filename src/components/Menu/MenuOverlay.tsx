@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 
 type MenuProps = {
-  color: string;
-  backgroundColor: string;
+  color?: string;
+  backgroundColor?: string;
 };
 
 gsap.registerPlugin(useGSAP);
@@ -19,8 +19,9 @@ const MenuOverlayOne = ({ color, backgroundColor }: MenuProps) => {
   // const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
-    // Set the CSS variable dynamically
-    document.documentElement.style.setProperty("--menu-fill-color", color);
+    if (color !== undefined) {
+      document.documentElement.style.setProperty("--menu-fill-color", color);
+    }
   }, [color]);
 
   useEffect(() => {

@@ -1,8 +1,11 @@
 import { ComponentProps } from "react";
 import MenuOverlayComponent from "../components/Menu/MenuOverlay";
+import OverlayTwoComponent from "../components/Menu/OverlayTwo";
 import { Meta, StoryObj } from "@storybook/react";
 
-type MenuProps = ComponentProps<typeof MenuOverlayComponent>;
+type MenuProps = ComponentProps<typeof MenuOverlayComponent> & {
+  menuOverlayColor?: string;
+};
 
 const meta: Meta<MenuProps> = {
   component: MenuOverlayComponent,
@@ -23,5 +26,15 @@ export const MenuOverlay: Story = {
   },
   render: (args) => {
     return <MenuOverlayComponent {...args} />;
+  },
+};
+
+export const OverlayTwo: Story = {
+  args: {
+    backgroundColor: "gray",
+    menuOverlayColor: "black",
+  },
+  render: (args) => {
+    return <OverlayTwoComponent {...args} />;
   },
 };
