@@ -2,9 +2,12 @@
 @use "./style/base/typography";
 
 @use "./style/abstracts/variables";
+@use "./style/abstracts/breakpoints";
 
 @use "./style/Components/Button/button";
 @use "./style/Components/Button/buttonOne";
 @use "./style/Components/Button/btnTwo";
 
 @use "./style/Components/PageEffects/snapScroll";
+
+@use "./style/Components/Menu/menuOverlay";
