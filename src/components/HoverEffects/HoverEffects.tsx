@@ -13,12 +13,12 @@ const HoverEffects = () => {
 
   const bgImages = useMemo(
     () => ({
-      p1: "src/assets/HoverEffects/one.jpg", // Note no '/src'
-      p2: "src/assets/HoverEffects/two.jpg",
-      p3: "src/assets/HoverEffects/three.jpg",
-      p4: "src/assets/HoverEffects/four.jpg",
-      p5: "src/assets/HoverEffects/five.jpg",
-      p6: "src/assets/HoverEffects/six.jpg",
+      p1: "https://i.pinimg.com/736x/35/32/57/3532575f431f2fc0670f12ed9e62e43d.jpg", // Note no '/src'
+      p2: "https://i.pinimg.com/736x/fa/1e/cc/fa1ecc0eaf09bc028f4b5b57c9ba3a6a.jpg",
+      p3: "https://i.pinimg.com/736x/53/eb/21/53eb216a33809c85135ff3f0f46074b4.jpg",
+      p4: "https://i.pinimg.com/736x/66/46/d5/6646d542a47e9cb18fd11426d4b89b44.jpg",
+      p5: "https://i.pinimg.com/736x/ea/87/78/ea8778bb4c73f9d87c12d18fe05d2d8c.jpg",
+      p6: "https://i.pinimg.com/736x/99/3f/b5/993fb5dcd16e38347b0a4433c86af758.jpg",
     }),
     []
   );
