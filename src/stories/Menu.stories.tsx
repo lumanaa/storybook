@@ -33,6 +33,7 @@ export const OverlayTwo: Story = {
   args: {
     backgroundColor: "gray",
     menuOverlayColor: "black",
+    color: "white",
   },
   render: (args) => {
     return <OverlayTwoComponent {...args} />;
