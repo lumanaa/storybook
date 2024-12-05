@@ -1,0 +1,63 @@
+.img-rotate-body {
+    background-color: rgb(31, 31, 31);
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .box {
+      position: relative;
+      width: 480px;
+      height: 480px;
+      transform: translateX(-60%);
+      animation: animateBox 15s linear infinite;
+      .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .imgBx {
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          box-shadow: 0 0 2px #fff;
+          transform: rotate(calc(360deg / 8 * var(--i)));
+          transform-origin: 380px;
+  
+          img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transform: rotate(calc(360deg / 8 * var(--i)));
+            animation: animateImgBx 15s linear infinite;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes animateImgBx {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: -360deg;
+    }
+  }
+  
+  @keyframes animateBox {
+    0% {
+     rotate: 0deg;
+    }
+    100% {
+     rotate: 360deg;
+    }
+  }

@@ -2,28 +2,34 @@ import { ComponentProps } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
 import CarouselComponent from "../components/Carousel/Carousel";
+import CirculatRotateComponent from "../components/Carousel/CircularRotate";
 
-type CarouselProps = ComponentProps<typeof CarouselComponent>;
+type CarouselProps = ComponentProps<typeof CarouselComponent> & {
+  image5?: string;
+  image6?: string;
+  image7?: string;
+  image8?: string;
+};
 const meta: Meta<CarouselProps> = {
   component: CarouselComponent,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },
-  argTypes: {
-    image1: {
-      control: {
-        type: "text",
-      },
-    },
-  },
+  // argTypes: {
+  //   image1: {
+  //     control: {
+  //       type: "text",
+  //     },
+  //   },
+  // },
 };
 
 export default meta;
 
 type Story = StoryObj<CarouselProps>;
 
-export const MenuOverlay: Story = {
+export const CarouselOne: Story = {
   args: {
     image1:
       "https://i.pinimg.com/1200x/b7/8d/1f/b78d1f53b5d0ae2c51dede3452567578.jpg",
@@ -36,5 +42,28 @@ export const MenuOverlay: Story = {
   },
   render: (args) => {
     return <CarouselComponent {...args} />;
+  },
+};
+
+export const CircularRotate: Story = {
+  args: {
+    image1:
+      "https://i.pinimg.com/1200x/20/75/90/20759031644a988b2552867c86fbf788.jpg",
+    image2:
+      "https://i.pinimg.com/1200x/ec/cb/eb/eccbeb24f932028bcba9e92a8f54cd50.jpg",
+    image3:
+      "https://i.pinimg.com/1200x/d0/9f/c1/d09fc1253de6ff67410d3d7b6474a3b1.jpg",
+    image4:
+      "https://i.pinimg.com/1200x/55/05/1e/55051edfe46fdfc4e6fd8e89dcc54452.jpg",
+    image5:
+      "https://i.pinimg.com/1200x/73/59/bd/7359bd9a8e13399a2798d91508d8028c.jpg",
+    image6:
+      "https://i.pinimg.com/1200x/3b/32/0a/3b320ae9054f35a0fde4e7ed1c43b695.jpg",
+    image7:
+      "https://i.pinimg.com/736x/64/84/59/648459ac59ffb5b1695ef2e3e138782d.jpg",
+      image8:'https://i.pinimg.com/1200x/cd/8e/7e/cd8e7e8114355f456a8186d97b9f650a.jpg'
+  },
+  render: (args) => {
+    return <CirculatRotateComponent {...args} />;
   },
 };
