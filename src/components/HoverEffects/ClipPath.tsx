@@ -7,16 +7,17 @@ type HoverProps = {
   image1?: string;
   image2?: string;
   image3?: string;
+  height?: string;
 };
 
-const ClipPath = ({ image1, image2, image3 }: HoverProps) => {
+const ClipPath = ({ image1, image2, image3, height='600px' }: HoverProps) => {
   const images = [image1, image2, image3].filter(Boolean) as string[];
   return (
     <CursorManager>
       <CustomCursor />
       <div className='hover-one-container'>
         <div className='hover-one'>
-          <Gallery images={images} />
+          <Gallery images={images} height={height} />
         </div>
       </div>
     </CursorManager>

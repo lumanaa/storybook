@@ -31,6 +31,7 @@ export const ClipPath: Story = {
       "https://i.pinimg.com/736x/4c/1d/71/4c1d71ae311ae36df15a391a8a621de0.jpg",
     image3:
       "https://i.pinimg.com/736x/c8/a7/63/c8a763300bb0f8bf2cb08df690d590f0.jpg",
+    height: "600px",
   },
   render: (args) => {
     return <ClipPathComponent {...args} />;

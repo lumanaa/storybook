@@ -10,6 +10,7 @@ interface GalleryItemProps {
 
 interface GalleryProps {
   images: string[]; // Array of image URLs
+  height: string;
 }
 
 const GalleryItem = ({ img }: GalleryItemProps) => {
@@ -86,10 +87,13 @@ const GalleryItem = ({ img }: GalleryItemProps) => {
   );
 };
 
-const Gallery = ({ images }: GalleryProps) => {
+const Gallery = ({ images, height }: GalleryProps) => {
   return (
     <div className='gallery-body'>
-      <div className='gallery'>
+      <div
+        className='gallery'
+        style={{ "--height": height } as React.CSSProperties}
+      >
         {images.map((img, i) => (
           <GalleryItem key={i} img={img} />
         ))}
