@@ -4,6 +4,7 @@ import ImageHoverComponent from "../components/HoverEffects/HoverEffects";
 import ClipPathComponent from "../components/HoverEffects/ClipPath";
 import MovingTooltipComponent from "../components/HoverEffects/MovingTooltip";
 
+
 type HoverProps = ComponentProps<typeof ClipPathComponent> & {
   backgroundColor?: string;
   color?: string;
