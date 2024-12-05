@@ -7,6 +7,11 @@ addons.setConfig({
         brandTitle: "Bring ideas to life",
         brandUrl: "https://lumana.dev",
         brandImage: "/storybook.png",
-        brandTarget: '_self'
+        brandTarget: '_self',
+        colorSecondary: '#f3add1',
+        appBg: '#f0f0f0',
+        appBorderColor: '#ccc',
+        textColor: '#333',
+        barTextColor: '#666'
     })
 })
