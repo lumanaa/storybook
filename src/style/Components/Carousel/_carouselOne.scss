@@ -1,0 +1,144 @@
+$night: #0f1513;
+
+$onyx: #2f3533;
+
+$wisteria: #bbabd8;
+
+$mimi-pink: #fdd7fa;
+
+$alice-blue: #dfeaee;
+
+.carousel-body {
+  .car-one-body {
+    background-color: $night;
+    width: 100vw;
+    height: 100vh;
+    .container {
+      position: absolute;
+
+      // z-index: 6;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1100px;
+      height: 700px;
+
+      background-color: $night;
+      box-shadow: 0 20px 30px $wisteria;
+      .slide {
+        .item {
+          width: 180px;
+          height: 180px;
+
+          position: absolute;
+          top: 70%;
+          transform: translate(10%, -50%);
+          border-radius: 50%;
+          box-shadow: 0 30px 50px rgba(85, 85, 85, 0.5);
+          background-position: 50% 50%;
+          background-size: cover;
+          display: inline-block;
+          transition: 0.5s;
+
+          &:nth-child(1) {
+            top: 0;
+            left: 0;
+            transform: translate((0, 0));
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+          }
+          &:nth-child(2) {
+            left: 48%;
+          }
+          &:nth-child(3) {
+            left: calc(48% + 220px);
+          }
+          &:nth-child(4) {
+            left: calc(48% + 440px);
+          }
+          &:nth-child(5) {
+            left: calc(48% + 660px);
+          }
+          &:nth-child(n + 5) {
+            left: calc(48% + 880px);
+            opacity: 0;
+          }
+          &:nth-child(1) {
+            .content {
+              display: block;
+            }
+          }
+          .content {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 360px;
+            text-align: left;
+            color: #eee;
+            transform: translate(0, -50%);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+              "Helvetica Neue", sans-serif;
+            display: none;
+            .name {
+              font-size: 40px;
+              text-transform: uppercase;
+              font-weight: bold;
+              opacity: 0;
+              animation: animate 1s ease-in-out 1 forwards;
+            }
+            .des {
+              margin-top: 10px;
+              margin-bottom: 20px;
+              opacity: 0;
+              animation: animate 1s ease-in-out 1 0.3s forwards;
+            }
+            button {
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+              opacity: 0;
+              animation: animate 1s ease-in-out 1 0.6s forwards;
+            }
+          }
+        }
+      }
+      .button {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        border: none;
+        bottom: 20px;
+        button {
+          width: 40px;
+          background-color: $alice-blue;
+
+          height: 30px;
+          border-radius: 50%;
+          cursor: pointer;
+          margin: 0 5px;
+          border: 1px solid#000;
+          transition: 0.3s;
+          &:hover {
+            background: $onyx;
+            color: $wisteria;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    fill: (0);
+  }
+}
