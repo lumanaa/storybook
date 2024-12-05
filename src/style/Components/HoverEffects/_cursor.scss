@@ -1,0 +1,40 @@
+$wisteria: #bbabd8;
+
+$mimi-pink: #fdd7fa;
+
+$alice-blue: #dfeaee;
+
+.app-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 80px; /* Cursor size */
+  height: 80px; /* Cursor size */
+  pointer-events: none; /* Prevent cursor from blocking mouse events */
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  top: 0; /* Start position */
+  left: 0; /* Start position */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    120deg,
+    $wisteria 20%,
+    $alice-blue 50%,
+    $mimi-pink 200%
+  );
+  transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+
+  /* Add glow effect */
+  // box-shadow: 0 0 20px rgba(228, 55, 121, 0.603), 0 0 30px rgba(160, 59, 255, 0.664);
+
+  &.small {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.hide {
+    width: 0;
+    height: 0;
+    transform-origin: center;
+    box-shadow: none; /* Remove shadow when hidden */
+  }
+}
