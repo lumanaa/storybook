@@ -12,6 +12,8 @@ type CarouselProps = {
 const Carousel = ({ image1, image2, image3, image4 }: CarouselProps) => {
   const [, setCurrentIndex] = useState(0);
 
+  
+
   const images = [
     {
       src: image1,

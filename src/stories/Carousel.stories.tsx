@@ -2,7 +2,8 @@ import { ComponentProps } from "react";
 
 import { Meta, StoryObj } from "@storybook/react";
 import CarouselComponent from "../components/Carousel/Carousel";
-import CirculatRotateComponent from "../components/Carousel/CircularRotate";
+import CircularRotateComponent from "../components/Carousel/CircularRotate";
+import CarouselTwoComponent from "../components/Carousel/CarouselTwo";
 
 type CarouselProps = ComponentProps<typeof CarouselComponent> & {
   image5?: string;
@@ -61,9 +62,20 @@ export const CircularRotate: Story = {
       "https://i.pinimg.com/1200x/3b/32/0a/3b320ae9054f35a0fde4e7ed1c43b695.jpg",
     image7:
       "https://i.pinimg.com/736x/64/84/59/648459ac59ffb5b1695ef2e3e138782d.jpg",
-      image8:'https://i.pinimg.com/1200x/cd/8e/7e/cd8e7e8114355f456a8186d97b9f650a.jpg'
+    image8:
+      "https://i.pinimg.com/1200x/cd/8e/7e/cd8e7e8114355f456a8186d97b9f650a.jpg",
   },
   render: (args) => {
-    return <CirculatRotateComponent {...args} />;
+    return <CircularRotateComponent {...args} />;
+  },
+};
+
+export const CarouselTwo: Story = {
+  args: {},
+  parameters: {
+    layout: "fullscreen",
+  },
+  render: () => {
+    return <CarouselTwoComponent />;
   },
 };

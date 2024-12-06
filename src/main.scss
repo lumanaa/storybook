@@ -18,7 +18,10 @@
 @use "./style/Components/HoverEffects/movingTooltip";
 
 @use "./style//Components/Carousel/carouselOne";
+@use "./style//Components/Carousel/carouselTwo";
 @use "./style/Components/Carousel/circularRotate";
 
 @use "./style/Components/Cards/cardOne";
 @use "./style/Components/Cards/flipCard";
+
+@use "./style/Components/SvgAnimation/svgAnimation";

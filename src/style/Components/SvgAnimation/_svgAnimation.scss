@@ -1,0 +1,46 @@
+.svg-body {
+  background-image: url(https://i.pinimg.com/736x/af/fd/d0/affdd00e3df346c836c99a8352519637.jpg);
+  height: 30rem;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .hello-svg {
+    svg path {
+      fill: transparent;
+      stroke: #fff;
+      stroke-width: 1.4;
+      stroke-dasharray: 315;
+      stroke-dashoffset: 315;
+      animation: textAnimation 4s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 315;
+  }
+  60% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #fff;
+  }
+}
+
+.frame-body {
+  height: 15rem;
+  width: 65px;
+  background-image: url(https://i.pinimg.com/1200x/1e/a8/98/1ea89842ae9c3d3e8b2753473820d70f.jpg);
+  background-position: 0 0;
+  background-size: auto 100%;
+  animation: Jump 1s steps(6) infinite;
+}
+
+@keyframes Jump {
+  to {
+    background-position: 100% 0%;
+  }
+}

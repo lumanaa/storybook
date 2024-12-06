@@ -118,7 +118,7 @@ const HoverEffects = () => {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  });
 
   return (
     <div className='hover-container'>
