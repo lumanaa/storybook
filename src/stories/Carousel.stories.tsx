@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import CarouselComponent from "../components/Carousel/Carousel";
 import CircularRotateComponent from "../components/Carousel/CircularRotate";
 import CarouselTwoComponent from "../components/Carousel/CarouselTwo";
+import SlideShowComponent from "../components/Carousel/SlideShow";
 
 type CarouselProps = ComponentProps<typeof CarouselComponent> & {
   image5?: string;
@@ -77,5 +78,15 @@ export const CarouselTwo: Story = {
   },
   render: () => {
     return <CarouselTwoComponent />;
+  },
+};
+
+export const SlideShow: Story = {
+  args: {},
+  parameters: {
+    layout: "centered",
+  },
+  render: () => {
+    return <SlideShowComponent />;
   },
 };

@@ -12,8 +12,6 @@ type CarouselProps = {
 const Carousel = ({ image1, image2, image3, image4 }: CarouselProps) => {
   const [, setCurrentIndex] = useState(0);
 
-  
-
   const images = [
     {
       src: image1,
@@ -38,13 +36,18 @@ const Carousel = ({ image1, image2, image3, image4 }: CarouselProps) => {
   ];
 
   const handleNextClick = () => {
-    const items = document.querySelectorAll(".item");
+    const items = document.querySelectorAll(
+      ".car-one-body .container .slide .item"
+    );
     document.querySelector(".slide")?.appendChild(items[0]); // Move the first item to the end
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length); // Update the state
   };
 
   const handlePrevClick = () => {
-    const items = document.querySelectorAll(".item");
+    const items = document.querySelectorAll(
+      ".car-one-body .container .slide .item"
+    );
+
     document.querySelector(".slide")?.prepend(items[items.length - 1]); // Move the last item to the start
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
