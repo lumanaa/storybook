@@ -2,6 +2,7 @@ import { ComponentProps } from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import CardsComponent from "../components/Cards/Cards";
 import FlipCardComponent from "../components/Cards/FlipCard";
+import CardTwoComponent from "../components/Cards/CardTwo";
 
 type CardsProps = ComponentProps<typeof CardsComponent> & {
   backgroundColor?: string;
@@ -38,4 +39,15 @@ export const GlassCards: Story = {
   render: (args) => {
     return <CardsComponent {...args} />;
   },
+};
+
+export const CardTwo: Story = {
+  args: {},
+  parameters: {
+    layout: "centered", // Override the layout to fullscreen for this story
+  },
+  render: () => {
+    return <CardTwoComponent />;
+  },
+  // The layout for FlipCard is still 'centered', inherited from the default in `meta`
 };
