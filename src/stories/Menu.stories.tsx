@@ -9,7 +9,6 @@ type MenuProps = ComponentProps<typeof MenuOverlayComponent> & {
 
 const meta: Meta<MenuProps> = {
   component: MenuOverlayComponent,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },
