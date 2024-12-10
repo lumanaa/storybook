@@ -4,6 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { ButtonComponent } from "../components/Buttons/Button";
 import ButtonOneComponent from "../components/Buttons/ButtonOne";
 import ButtonTwoComponent from "../components/Buttons/ButtonTwo";
+import SubmitBtn from "../components/Buttons/SubmitBtn";
 
 type BtnProps = ComponentProps<typeof ButtonComponent> & {
   btnText: string;
@@ -110,5 +111,16 @@ export const ButtonTwo: Story = {
   },
   render: ({ btnText, ...args }) => {
     return <ButtonTwoComponent {...args}>{btnText}</ButtonTwoComponent>;
+  },
+};
+
+export const SubmitButton: Story = {
+  args: {
+    btnText: "Button",
+    color:"#41c948"
+  },
+
+  render: ({ btnText, ...args }) => {
+    return <SubmitBtn {...args}>{btnText}</SubmitBtn>;
   },
 };

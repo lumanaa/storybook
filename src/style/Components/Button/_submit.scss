@@ -1,0 +1,58 @@
+.submit-container button {
+  outline: none;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 40px;
+  text-align: center;
+  background: #fff;
+  border: 2px solid var(--clr);
+  color: var(--clr);
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  &:hover {
+    color: white;
+    background-color: var(--clr);
+  }
+  &:active {
+    letter-spacing: 2px;
+  }
+  &::after {
+    content: attr(data-btn-text);
+  }
+}
+
+.submit-container .onclic {
+  width: 3rem;
+  border-color: gray;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: var(--clr);
+  animation: rotating 1.6s 0.25s linear infinite;
+  &:after {
+    content: "";
+  }
+  &:hover {
+    color: var(--clr);
+    background: white;
+  }
+}
+.submit-container .validate {
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--clr);
+  &::after {
+    content: attr(data-icon);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
