@@ -1,0 +1,45 @@
+.stack-cards {
+  height: 32rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "IBM Plex Sans", serif;
+  letter-spacing: 1px;
+}
+.stack-cards .container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  .card {
+    background-color: #444;
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translateX(-50%) translateY(calc(50px * var(--i))) rotate(40deg)
+      skew(-20deg, -10deg) scale(0.6);
+    box-shadow: 25px 25px 100px rgba(0, 0, 0, 0.2);
+    z-index: calc(-1 * var(--i)); // Ensure positive z-index values
+    transition: 0.5s;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .card:nth-child(2) {
+    opacity: 0.8;
+  }
+  .card:nth-child(3) {
+    opacity: 0.6;
+  }
+  &:hover .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(calc(-50% + calc(320px * var(--i)))) translateY(-50%)
+      rotate(0deg) skew(0deg, 0deg) scale(1);
+    opacity: 1;
+    opacity: 1;
+  }
+}

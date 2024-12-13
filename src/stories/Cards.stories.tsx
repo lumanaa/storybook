@@ -3,6 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import CardsComponent from "../components/Cards/Cards";
 import FlipCardComponent from "../components/Cards/FlipCard";
 import CardTwoComponent from "../components/Cards/CardTwo";
+import StackCardsComponent from "../components/Cards/StackCards";
 
 type CardsProps = ComponentProps<typeof CardsComponent> & {
   backgroundColor?: string;
@@ -48,6 +49,17 @@ export const CardTwo: Story = {
   },
   render: () => {
     return <CardTwoComponent />;
+  },
+  // The layout for FlipCard is still 'centered', inherited from the default in `meta`
+};
+
+export const StackCards: Story = {
+  args: {},
+  parameters: {
+    layout: "centered", // Override the layout to fullscreen for this story
+  },
+  render: () => {
+    return <StackCardsComponent />;
   },
   // The layout for FlipCard is still 'centered', inherited from the default in `meta`
 };
