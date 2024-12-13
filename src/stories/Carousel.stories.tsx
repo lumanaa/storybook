@@ -5,6 +5,7 @@ import CarouselComponent from "../components/Carousel/Carousel";
 import CircularRotateComponent from "../components/Carousel/CircularRotate";
 import CarouselTwoComponent from "../components/Carousel/CarouselTwo";
 import SlideShowComponent from "../components/Carousel/SlideShow";
+import ThreeDSliderComponent from "../components/Carousel/ThreeDSlider";
 
 type CarouselProps = ComponentProps<typeof CarouselComponent> & {
   image5?: string;
@@ -88,5 +89,15 @@ export const SlideShow: Story = {
   },
   render: () => {
     return <SlideShowComponent />;
+  },
+};
+
+export const ThreeDSlider: Story = {
+  args: {},
+  parameters: {
+    layout: "fullscreen",
+  },
+  render: () => {
+    return <ThreeDSliderComponent />;
   },
 };
